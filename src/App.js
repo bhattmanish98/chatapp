@@ -2,9 +2,11 @@ import React  from 'react';
 import { ChatEngine } from 'react-chat-engine';
 import ChatFeed from './components/ChatFeed.jsx';
 import './App.css';
+import LoginForm from './components/LoginForm.jsx';
 
 
 function App() {
+  if (!localStorage.getItem('username')) return <LoginForm/>
   return (
     <div className="App">
       <ChatEngine
